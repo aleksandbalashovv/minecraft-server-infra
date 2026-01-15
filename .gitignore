@@ -1,0 +1,19 @@
+# Runtime data (never commit)
+data/
+logs/
+
+# Secrets
+.env
+.env.*
+
+# Backups
+*.bak
+*.bak.*
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary
+*.log

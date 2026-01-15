@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  minecraft:
+    image: itzg/minecraft-server:java21
+    container_name: minecraft
+    restart: unless-stopped
+
+    ports:
+      - "25565:25565"
+
+    environment:
+      EULA: "TRUE"
+      TYPE: PAPER
+      VERSION: 1.21.11
+      JVM_OPTS: "-Xms1500M -Xmx3000M"
+
+    volumes:
+      - ./data:/data
+      - ./logs:/data/logs
+
+    tty: true
+    stdin_open: true
